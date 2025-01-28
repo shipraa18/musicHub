@@ -24,7 +24,6 @@ import {
 } from 'lucide-react';
 
 const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
-  // Music mode navigation items
   const musicNavItems = [
     { icon: <Home className="w-6 h-6" />, label: 'Home', active: true },
     { icon: <Radio className="w-6 h-6" />, label: 'Radio' },
@@ -74,7 +73,6 @@ const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
     'Book Club'
   ];
 
-  // Select the appropriate items based on mode
   const mainNavItems = isMusicMode ? musicNavItems : socialNavItems;
   const libraryItems = isMusicMode ? musicLibraryItems : socialLibraryItems;
   const collections = isMusicMode ? musicPlaylists : socialGroups;
@@ -85,7 +83,7 @@ const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
       isExpanded ? 'w-64' : 'w-20'
     }`}>
       <div className="p-6">
-        {/* Logo */}
+        
         <div className="flex items-center gap-2 mb-8">
           <div className="text-cyan-400 text-2xl font-bold">
             {isExpanded ? 'Node' : 'N'}
@@ -97,8 +95,6 @@ const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
             {isExpanded ? '◀' : '▶'}
           </button>
         </div>
-
-        {/* Main Navigation */}
         <div className="space-y-2">
           {mainNavItems.map((item, index) => (
             <div
@@ -111,8 +107,6 @@ const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
             </div>
           ))}
         </div>
-
-        {/* Library Section */}
         {isExpanded && (
           <>
             <div className="mt-8">
@@ -132,7 +126,7 @@ const Navbar = ({ isExpanded, setIsExpanded, isMusicMode }) => {
               </div>
             </div>
 
-            {/* Collections Section */}
+         
             <div className="mt-8">
               <h3 className="text-xs font-semibold text-gray-400 mb-4 px-2">{collectionsTitle}</h3>
               <div className="space-y-2">

@@ -23,7 +23,7 @@ const Header = ({ isNavExpanded, isMusicMode, setIsMusicMode }) => {
       isNavExpanded ? 'ml-64' : 'ml-20'
     }`}>
       <div className="flex items-center justify-between gap-4">
-        {/* Search Bar */}
+    
         <div className="relative flex-1 max-w-2xl">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
           <input
@@ -33,9 +33,7 @@ const Header = ({ isNavExpanded, isMusicMode, setIsMusicMode }) => {
           />
         </div>
 
-        {/* Right side controls */}
         <div className="flex items-center gap-4">
-          {/* Music/Social Toggle */}
           <div className="bg-gray-800 rounded-full p-1 flex items-center">
             <button
               onClick={() => setIsMusicMode(true)}
@@ -57,12 +55,11 @@ const Header = ({ isNavExpanded, isMusicMode, setIsMusicMode }) => {
             </button>
           </div>
 
-          {/* Notifications */}
+          
           <button className="text-gray-400 hover:text-white">
             <Bell size={20} />
           </button>
 
-          {/* Profile Section */}
           <div className="relative">
             <button
               onClick={() => setIsProfileOpen(!isProfileOpen)}
@@ -76,7 +73,6 @@ const Header = ({ isNavExpanded, isMusicMode, setIsMusicMode }) => {
               <span className="text-white">Shipra</span>
             </button>
 
-            {/* Dropdown Menu */}
             {isProfileOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg py-1 text-gray-300 z-50">
                 <div className="px-4 py-2 border-b border-gray-700">
